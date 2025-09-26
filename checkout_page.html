@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      padding: 20px;
+    }
+    .checkout-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .order-summary {
+      background: #fafafa;
+      padding: 15px;
+      margin: 20px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .btn {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Finalizar Compra</h2>
+
+    <!-- Datos del cliente -->
+    <form>
+      <h3>Datos personales</h3>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" required>
+
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" required>
+
+      <label for="ciudad">Ciudad</label>
+      <input type="text" id="ciudad" required>
+
+      <label for="provincia">Provincia</label>
+      <input type="text" id="provincia" required>
+
+      <label for="codigo-postal">Código Postal</label>
+      <input type="text" id="codigo-postal" required>
+
+      <!-- Pago -->
+      <h3>Método de pago</h3>
+      <label for="tarjeta">Número de tarjeta</label>
+      <input type="text" id="tarjeta" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+
+      <label for="expira">Fecha de expiración</label>
+      <input type="month" id="expira" required>
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" placeholder="123" required>
+
+      <!-- Resumen -->
+      <div class="order-summary">
+        <h3>Resumen del pedido</h3>
+        <p>Producto: Zapatillas deportivas</p>
+        <p>Cantidad: 1</p>
+        <p><strong>Total: $45.000</strong></p>
+      </div>
+
+      <button type="submit" class="btn">Realizar pago</button>
+    </form>
+  </div>
+</body>
+</html>
