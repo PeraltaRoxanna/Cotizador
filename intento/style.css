@@ -88,3 +88,7 @@ footer p, footer a {
   transform: scale(1.05);
 }
 
+a.text-white:hover {
+  color: #0dcaf0 !important;
+}
+
