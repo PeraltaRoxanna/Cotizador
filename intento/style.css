@@ -1,11 +1,29 @@
 body {
-  background-color: #fce4e8; /* Un rosado más suave para el fondo */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fce4e8;
+}
+
+footer {
+  margin-top: auto; /* empuja el footer al final */
+}
+
+footer p, footer a {
+  margin: 0; /* elimina márgenes por defecto */
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* --- CARRUSEL --- */
 /* Mantiene el carrusel con un formato apaisado (16:9) */
 .carousel-inner {
-  aspect-ratio: 16 / 9;
+/* aspect-ratio: 16 / 9;*/
   border-radius: 0.5rem; /* Bordes redondeados para suavizar */
   overflow: hidden; /* Asegura que las imágenes no se salgan de los bordes redondeados */
 }
@@ -24,3 +42,49 @@ body {
   font-weight: bold;
   min-height: 2rem; /* Le da un alto mínimo para que no salte el layout */
 }
+
+.carousel-item img { 
+
+  object-fit:contain;
+  height:400px;
+  width:100%;
+}
+
+/* --- BOTONES --- */
+#valorInput {
+  border-radius: 0.5rem; /* Bordes redondeados para el input */
+  border: 2px solid #ff4081; /* Borde rosa vibrante */
+ }
+
+.input-group{
+  width: 100%;
+  max-width: 420px;
+  margin: 0.5rem auto 1.5rem auto;
+  align-items: center;
+}
+
+#btnCalcular {
+  background-color: #ff4081; /* Color de fondo rosa vibrante */
+  color: white; /* Texto blanco para contraste */
+  border: none; /* Sin borde */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.boton-pacifico {
+  background-color: #ff4081; /* Color de fondo rosa vibrante */
+  color: white; /* Texto blanco para contraste */
+  border: none; /* Sin borde */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.boton-pacifico:hover {
+  background-color: #e73370; /* un rosa más oscuro al pasar */
+  transform: scale(1.05);
+}
+
