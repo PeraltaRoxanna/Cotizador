@@ -8,11 +8,7 @@ btn.addEventListener('click', () => {
   let valor = input.value.replace(",", "."); 
   if (!isNaN(valor) && valor.trim() !== "") {
     let calculo = Math.ceil((parseFloat(valor)+2.2) * 1500); 
-    
-    // Resultado
-    resultado.innerHTML = `<span class="pacifico-regular">Resultado: $${calculo.toLocaleString('es-AR')} ARS</span>`;
-    
-    // Botón "Comprar"
+    resultado.innerHTML = `<span class="pacifico-regular">$${calculo.toLocaleString('es-AR')} ARS</span>`;
     document.getElementById('botonLink').innerHTML = `
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4fS38SeDDiaoYoIpn4BVGaVFF8RSRGYO4XmsRYt_u36xBBA/viewform?usp=header" 
          target="_blank" 
@@ -20,11 +16,20 @@ btn.addEventListener('click', () => {
          Comprar
       </a>
     `;
+
+    // 👇 También cambia la imagen del carrusel
+    const carousel = document.querySelector("#carouselExample");
+    const activeItem = carousel.querySelector(".carousel-item.active");
+    const nextItem = activeItem.nextElementSibling || carousel.querySelector(".carousel-item:first-child");
+    activeItem.classList.remove("active");
+    nextItem.classList.add("active");
+
   } else {
     resultado.textContent = "⚠️ Ingresa un número válido.";
     document.getElementById('botonLink').innerHTML = ""; 
   }
 });
+
 
 
 
