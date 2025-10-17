@@ -14,27 +14,6 @@ footer p, footer a {
   margin: 0; /* elimina márgenes por defecto */
 }
 
-.pacifico-regular {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* --- CARRUSEL --- */
-/* Mantiene el carrusel con un formato apaisado (16:9) */
-.carousel-inner {
-/* aspect-ratio: 16 / 9;*/
-  border-radius: 0.5rem; /* Bordes redondeados para suavizar */
-  overflow: hidden; /* Asegura que las imágenes no se salgan de los bordes redondeados */
-}
-
-/* Ajusta las imágenes para que cubran todo el espacio sin deformarse */
-.carousel-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 
 /* --- RESULTADO --- */
 .resultado {
@@ -42,12 +21,6 @@ footer p, footer a {
   font-weight: bold;
   min-height: 2rem; /* Le da un alto mínimo para que no salte el layout */
 }
-
-.carousel-item img { 
-
-  object-fit:contain;
-  height:400px;
-  width:100%;
 }
 
 /* --- BOTONES --- */
@@ -91,4 +64,80 @@ footer p, footer a {
 a.text-white:hover {
   color: #0dcaf0 !important;
 }
+
+
+footer {
+  background-color: #b61733; /* nuevo color de fondo */
+  color: #ffffff;            /* texto en blanco */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* --- HEADER MINI DECORATIVO --- */
+.header-mini {
+  background-color: #d62839; /* podés cambiar a #ff4d6d si querés más rosado */
+  color: white;
+  font-size: 0.9rem;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0 0 6px 6px;
+  letter-spacing: 0.5px;
+}
+
+.hearts {
+  position: absolute;
+  left: 10px;
+  font-size: 1rem;
+}
+
+.header-text {
+  font-size: 0.6rem;
+  margin: 0 auto;
+}
+
+.decor-x {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+/* Opcional: pequeño efecto visual */
+.decor-x:hover,
+.hearts:hover {
+  opacity: 1;
+}
+
+/* --- CONTENEDOR CON PATRÓN --- */
+.container-patron {
+  width: 100%;
+  height: 340px; /* 🔸 ajustá según necesites */
+  background-image: url("https://i.pinimg.com/736x/a7/d3/a1/a7d3a1dbb1894f47a43e7a73282fce78.jpg");
+  background-repeat: repeat;        /* 🔥 se repite en toda la pantalla */
+  background-size: auto;            /* mantiene su tamaño original */
+  background-position: top center;  /* centrado y alineado arriba */
+  display: flex;
+  justify-content: center;          /* centra horizontalmente */
+  align-items: flex-start;          /* mantiene imagen un poco arriba */
+  padding-top: 40px;                /* separación desde el borde */
+  margin: 0;
+}
+
+/* --- IMAGEN DECORATIVA (gatitos) --- */
+.imagen-decorativa {
+  width: 280px; /* 🔸 ajustá según te guste */
+  height: auto;
+  z-index: 2;
+}
+.header-mini {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+
 
