@@ -130,7 +130,7 @@ footer {
 
 /* --- IMAGEN DECORATIVA (gatitos) --- */
 .imagen-decorativa {
-  width: 280px; /* 🔸 ajustá según te guste */
+  width: 400px; /* 🔸 ajustá según te guste */
   height: auto;
   z-index: 2;
 }
