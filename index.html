@@ -11,13 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
- <!-- ...existing code... -->
+ 
 <header class="header-mini text-center pacifico-regular">
   <div class="hearts">❤︎ ❤︎ ❤︎</div>
   <span class="header-text">HEAVEN.BUYEE.COM/COTIZADOR</span>
   <div class="decor-x">✕</div>
 </header>
 
+<main>
 <!-- CONTENEDOR CON PATRÓN -->
 <div class="container-patron">
   <img src="https://i.postimg.cc/g0dKZmkp/Heaven-buyee-comcotizador-20251016-211910-0000-1.png" 
@@ -31,48 +32,46 @@
       <div class="col-12 col-md-8 col-lg-6">
 
        
-         <p class="text-center pacifico-regular ">Bienvenido a Mi Cotizador! Ingresa un valor y presiona "Enviar" para ver el resultado.</p>
-          
-        <!-- INPUT + BOTÓN centrado -->
-        <div class="input-group mb-3 mt-3">
+    
+                <!-- INPUT + BOTÓN centrado -->
+        <div class="input-group mb-3 mt-6">
           <input 
             type="text" 
             id="valorInput" 
             class="pacifico-regular form-control" 
-            placeholder="Ingresa un número con coma (ej: 12,5)">
-          <button class="btn btn-primary pacifico-regular" type="button" id="btnCalcular"  >Enviar</button> 
+            placeholder="Ingresa el valor de tu link">
+          <button class="btn btn-primary pacifico-regular" type="button" id="btnCalcular"  >Cotizar</button> 
         </div>
 
-        <!-- RESULTADO -->
+        <!-- RESULTADO 
         <div id="resultado" class="resultado text-center"></div>
-        <div id="botonLink" class="text-center mt-3"></div>
-
-
+        <div id="botonLink" class="text-center mt-3"></div>-->
+        <img id="cuadroImagen" src="https://i.postimg.cc/ZRBGwQMh/Heaven-buyee-comcotizador-20251016-212513-0000.png" alt="cuadro" />
+    <div class="creditos">
+          <span>©Heaven’s Buyee</span>
+          <span class="corazon">❤️</span>
+          <a href="https://www.instagram.com/heeaven.st/" target="_blank">@Heaven.st</a>
+          <a href="https://www.instagram.com/messityun/" target="_blank">@Messityun</a>
+    </div>
 
       </div>
     </div>
   </div>
 
-  <footer class="text-white text-center py-2 pacifico-regular">
-    <div class="container">
-      <h4>Muchas gracias por pedir con nosotras!</h4>
-      <a href="https://www.instagram.com/heeaven.st/" 
-       target="_blank" 
-        class="text-white text-decoration-none">
-          @HeavenStore
-       </a>
+   <!-- CONTENEDOR DE IMAGEN DEBAJO DEL INPUT 
+  <div class="contenedor-imagen">
+    <img src="https://i.postimg.cc/ZRBGwQMh/Heaven-buyee-comcotizador-20251016-212513-0000.png" 
+      alt="imagen decorativa" 
+      class="imagen-contenedor">*/
+  </div>-->
+<!-- IMAGEN SIMPLE DEBAJO DEL INPUT -->
+  </main>
 
-      &nbsp; | &nbsp;
+<footer class="footer"></footer>
 
-      <a href="https://www.instagram.com/messityun/" 
-       target="_blank" 
-        class="text-white text-decoration-none">
-        @Messityun
-      </a>
+  
 
-      </a>
-    </div>
-  </footer>
+
    <script src="./intento/JavaScript.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
