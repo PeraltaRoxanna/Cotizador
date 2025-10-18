@@ -297,3 +297,78 @@ footer {
     height: 160px;
   }
 }
+/* ======= Reglas para la columna principal: forzar centrado y que la imagen no salga del contenedor ======= */
+.col-12.col-md-8.col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centra input, imagen y créditos */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+/* Asegurarnos que el contenedor bootstrap no añada overflow inesperado */
+.container {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* ======= IMAGEN RESPONSIVE: mantén forma y NO se deforme ni se salga ======= */
+#cuadroImagen {
+  display: block;
+  width: clamp(320px, 60vw, 900px); /* mínimo 320, ideal 60% del viewport, máximo 900 */
+  max-width: 100%;
+  height: auto;                     /* mantiene proporción real de la imagen */
+  margin: 1rem auto;
+  border-radius: 12px;
+  object-fit: contain;              /* evita recorte o estiramiento */
+  transition: width 0.25s ease, margin 0.25s ease;
+}
+
+/* Si querés que ocupe todo el ancho del contenedor padre (sin salirse) */
+.imagen-contenedor, .contenedor-imagen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ======= Créditos que escalan ======= */
+.creditos {
+  text-align: center;
+  font-weight: 800;
+  color: #b40026;
+  font-size: clamp(12px, 1.05vw, 14px); /* escala suave según pantalla */
+  margin-top: 0.9rem;
+  width: 100%;
+}
+
+/* ======= Footer flexible ======= */
+.footer {
+  width: 100%;
+  min-height: 80px;
+  height: auto;
+  background-image: url('https://i.postimg.cc/tg7jZkFq/Heaven-buyee-comcotizador-20251016-212643-0000-2.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+  margin-top: auto;
+}
+
+/* ======= Media queries para tablet y móvil ======= */
+@media (max-width: 1024px) {
+  /* menos separación superior para que no se desplace todo hacia abajo en tablet */
+  .container-patron { padding-top: 20px; min-height: 150px; }
+
+  /* la imagen puede usar más porcentaje en pantallas intermedias */
+  #cuadroImagen { width: clamp(300px, 80vw, 800px); }
+
+  /* Reducir márgenes y tamaños de botones/inputs si es necesario */
+  .input-group { margin: 2rem auto 1rem auto; max-width: 92%; }
+  #valorInput, #btnCalcular { height: 46px; font-size: 0.95rem; }
+}
+
+@media (max-width: 420px) {
+  /* celulares: ajustar aún más */
+  #cuadroImagen { width: 95vw; max-width: 420px; }
+  .creditos { font-size: 11px; }
+}
