@@ -4,55 +4,31 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: #ffcee4;
-  font-family: sans-serif;
 }
 
-/* HEADER MINI */
-.header-mini {
-  background-color: #d62839;
-  color: white;
-  font-size: 0.9rem;
-  height: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  letter-spacing: 0.5px;
-  margin-bottom: 0;
-  border-radius: 0;
+footer {
+  margin-top: auto; /* empuja el footer al final */
 }
 
-.hearts {
-  position: absolute;
-  left: 10px;
+footer p, footer a {
+  margin: 0; /* elimina márgenes por defecto */
 }
 
-.decor-x {
-  position: absolute;
-  right: 10px;
+
+/* --- RESULTADO --- */
+.resultado {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-height: 2rem; /* Le da un alto mínimo para que no salte el layout */
+}
 }
 
-/* CONTENEDOR CON PATRÓN */
-.container-patron {
-  width: 100%;
-  min-height: 180px;
-  background-image: url("https://i.pinimg.com/736x/a7/d3/a1/a7d3a1dbb1894f47a43e7a73282fce78.jpg");
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: top center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 40px;
-}
+/* --- BOTONES --- */
+#valorInput {
+  border-radius: 0.5rem; /* Bordes redondeados para el input */
+  border: 2px solid #ff4081; /* Borde rosa vibrante */
+ }
 
-.imagen-decorativa {
-  width: 80%;
-  max-width: 360px;
-  height: auto;
-}
-
-/* INPUT Y BOTÓN */
 .input-group {
   display: flex;
   justify-content: center;
@@ -60,29 +36,144 @@ body {
   gap: 10px;
   width: 100%;
   max-width: 420px;
-  margin: 3rem auto 1.5rem auto;
+  margin: 1.5rem auto 0.5rem auto; /* 🔹 mucho menos espacio arriba */
 }
 
+#botonLink {
+  margin-bottom: 0; /* elimina cualquier separación fantasma entre el input y el contenedor */
+}
+
+
+#btnCalcular {
+  background-color: #ff4081; /* Color de fondo rosa vibrante */
+  color: white; /* Texto blanco para contraste */
+  border: none; /* Sin borde */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.boton-pacifico {
+  background-color: #ff4081; /* Color de fondo rosa vibrante */
+  color: white; /* Texto blanco para contraste */
+  border: none; /* Sin borde */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.boton-pacifico:hover {
+  background-color: #e73370; /* un rosa más oscuro al pasar */
+  transform: scale(1.05);
+}
+
+a.text-white:hover {
+  color: #0dcaf0 !important;
+}
+
+
+footer {
+  background-color: #1789b6; /* nuevo color de fondo */
+  color: #ffffff;            /* texto en blanco */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* --- HEADER MINI DECORATIVO --- */
+.header-mini {
+  background-color: #d62839; /* podés cambiar a #ff4d6d si querés más rosado */
+  color: white;
+  font-size: 0.9rem;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0 0 6px 6px;
+  letter-spacing: 0.5px;
+}
+
+.hearts {
+  position: absolute;
+  left: 10px;
+  font-size: 1rem;
+}
+
+.header-text {
+  font-size: 0.6rem;
+  margin: 0 auto;
+}
+
+.decor-x {
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+/* Opcional: pequeño efecto visual */
+.decor-x:hover,
+.hearts:hover {
+  opacity: 1;
+}
+
+/* --- CONTENEDOR CON PATRÓN --- */
+.container-patron {
+  width: 100%;
+  height: 240px; /* 🔸 ajustá según necesites */
+  background-image: url("https://i.pinimg.com/736x/a7/d3/a1/a7d3a1dbb1894f47a43e7a73282fce78.jpg");
+  background-repeat: repeat;        /* se repite en toda la pantalla */
+  background-size: auto;            /* mantiene su tamaño original */
+  background-position: top center;  /* centrado y alineado arriba */
+  display: flex;
+  justify-content: center;          /* centra horizontalmente */
+  align-items: flex-start;          /* mantiene imagen un poco arriba */
+  padding-top: 40px;                /* separación desde el borde */
+  margin: 0;
+}
+
+/* --- IMAGEN DECORATIVA (gatitos) --- */
+.imagen-decorativa {
+  width: 370px; /*  ajustá según te guste */
+  height: auto;
+  z-index: 2;
+}
+.header-mini {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* --- ESTILO VISUAL DEL INPUT Y BOTÓN --- */
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+  margin: 5rem auto 1.5rem auto;
+}
+
+/* 🔹 Input rosa con sombra y texto centrado */
 #valorInput {
   flex: 1;
   height: 50px;
-  border: 2px solid #b81e32;
+  border: 2px solid #b81e32; 
   border-radius: 50px;
   background-color: #f89abf;
-  box-shadow: 3px 3px 0 #c9254c;
-  padding: 0 15px;
-  font-size: 1rem;
-  color: white;
+  box-shadow: 4px 4px 0 #c9254c;
+  padding: 0 20px;
+  font-size: 16px;
+  color: white;  
   text-align: center;
   outline: none;
 }
 
-#valorInput::placeholder {
-  color: white;
-  opacity: 1;
-  text-align: center;
-}
-
+/* 🔹 Botón redondo tipo “bubble” */
 #btnCalcular {
   background-color: #f89abf;
   color: #a8002a;
@@ -91,36 +182,71 @@ body {
   height: 50px;
   padding: 0 25px;
   font-weight: 800;
-  font-size: 1rem;
-  box-shadow: 3px 3px 0 #b81e32;
+  font-size: 16px;
+  box-shadow: 4px 4px 0 #b81e32;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
+/* 🔹 Efecto al pasar el mouse */
 #btnCalcular:hover {
   background-color: #ff5e8d;
   transform: translateY(-2px);
+
 }
 
-/* IMAGEN DEBAJO DEL INPUT */
-#cuadroImagen {
-  display: block;
-  width: 90%;
-  max-width: 420px;
+/* Placeholder blanco dentro del input */
+#valorInput::placeholder {
+  color: white;            /* 🌸 texto blanco */
+  opacity: 1;              /* asegura que no quede gris */
+  text-align: center;      /* centrado */
+  font-weight: 500;
+}
+
+/* --- CONTENEDOR DE IMAGEN DEBAJO DEL INPUT --- */
+.contenedor-imagen {
+  width: 100%;
+  max-width: 420px;      /* mismo ancho que el input */
+  margin: 0.8rem auto 1rem auto;   /* centrado con margen arriba y abajo */
+  background-color: none;
+  border: none;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* --- IMAGEN INTERNA --- */
+.imagen-contenedor {
+  width: 100%;
   height: auto;
-  margin: 0.6rem auto;
   border-radius: 12px;
   object-fit: contain;
 }
 
-/* CRÉDITOS */
+/* --- IMAGEN DEBAJO DEL INPUT (RESPONSIVE SIN DEFORMAR) --- */
+#cuadroImagen {
+  display: block;
+  width: 100%;            /* ocupa todo el ancho del contenedor */
+  max-width: 1000px;      /* límite en pantallas grandes */
+  height: auto;           /* mantiene proporciones */
+  aspect-ratio: 16 / 9;   /* 🔹 mantiene forma visual estable */
+  margin: 1rem auto;
+  border-radius: 12px;
+  object-fit: contain;    /* evita recorte o estiramiento */
+  transition: all 0.3s ease;
+}
+
+
+/* --- CRÉDITOS --- */
 .creditos {
   text-align: center;
   font-family: 'Comic Sans MS', 'Fredoka One', 'Poppins', sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   color: #b40026;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1vw, 1rem); /* 🔹 escala dinámicamente */
   letter-spacing: 1px;
   margin-top: 1rem;
 }
@@ -139,10 +265,10 @@ body {
   color: #ff3366;
 }
 
-/* FOOTER */
+/* --- FOOTER --- */
 .footer {
   width: 100%;
-  height: 100px;
+  height: clamp(80px, 12vh, 150px); /* 🔹 altura flexible según la pantalla */
   background-image: url('https://i.postimg.cc/tg7jZkFq/Heaven-buyee-comcotizador-20251016-212643-0000-2.png');
   background-repeat: repeat;
   background-size: auto;
@@ -150,34 +276,24 @@ body {
   margin-top: auto;
 }
 
-/* 🔹 RESPONSIVE: CELULARES */
+/* 🔹 Ajustes para pantallas pequeñas */
 @media (max-width: 576px) {
-  .container-patron {
-    min-height: 140px;
-    padding-top: 20px;
-  }
-  .imagen-decorativa {
-    width: 90%;
-    max-width: 300px;
-  }
-  #valorInput, #btnCalcular {
-    height: 45px;
-    font-size: 0.9rem;
+  #cuadroImagen {
+    width: 95vw;
+    max-width: 500px;
   }
   .creditos {
     font-size: 0.8rem;
   }
 }
 
-/* 🔹 RESPONSIVE: PANTALLAS GRANDES */
+/* 🔹 Ajustes para pantallas muy grandes */
 @media (min-width: 1200px) {
-  .container-patron {
-    min-height: 260px;
-  }
-  .imagen-decorativa {
-    max-width: 420px;
-  }
   #cuadroImagen {
-    max-width: 500px;
+    width: 70vw;
+    max-width: 1200px;
+  }
+  .footer {
+    height: 160px;
   }
 }
