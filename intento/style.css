@@ -108,7 +108,8 @@ body {
 /* --- CONTENEDOR CON PATRÓN --- */
 .container-patron {
   width: 100%;
-  height: 220px; /* Un poco más bajo para empezar */
+  height: 240px;
+  /* LA LÍNEA CLAVE QUE SE HABÍA PERDIDO: */
   background-image: url("https://i.pinimg.com/736x/a7/d3/a1/a7d3a1dbb1894f43e7a73282fce78.jpg");
   background-repeat: repeat;
   background-size: 450px;
@@ -116,20 +117,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 30px; /* Un poco menos de padding */
+  padding-top: 40px;
   margin: 0;
-  transition: all 0.3s ease; /* Añadimos transición para que sea suave */
 }
 
-/* --- IMAGEN DECORATIVA (gatitos) --- */
+/* --- IMAGEN DECORATIVA (corazón) --- */
 .imagen-decorativa {
-  width: 370px; /*  ajustá según te guste */
+  width: 370px; /* Tamaño original para PC */
   height: auto;
   z-index: 2;
-  margin-top: -25px; /* sube la imagen, ajustá el valor */
 }
 .header-mini {
-  margin-bottom: 0;
+  margin-bottom: 0; 
   border-radius: 0;
 }
 /* --- ESTILO VISUAL DEL INPUT Y BOTÓN --- */
@@ -140,8 +139,8 @@ body {
   gap: 10px;
   width: 100%;
   max-width: 450px;
-  /* Margen superior MUY reducido, esta era una de las causas principales */
-  margin: 2rem auto 1.5rem auto; 
+  /* El margen grande que necesita la PC para verse bien */
+  margin: 5rem auto 1.5rem auto; 
 }
 
 /* 🔹 Input rosa con sombra y texto centrado */
@@ -328,53 +327,69 @@ main {
 
 
 
-/* --- AJUSTES RESPONSIVOS --- */
-/* --- 🔹 Versión móvil sin scroll --- */
-@media (max-height: 750px) {
-  body {
-    overflow: hidden; /* evita que aparezca scroll */
-  }
-
-  main {
-    flex: 1;
-    overflow: hidden;
-  }
+//* ============================================= */
+/* --- AJUSTES RESPONSIVOS PARA VISTA MÓVIL --- */
+/* (Solo para pantallas de 500px o menos)    */
+/* ============================================= */
+@media (max-width: 500px) {
 
   .container-patron {
-    height: 160px; /* 🔸 más compacto */
-    padding-top: 25px;
+    height: 150px; /* Hacemos el contenedor superior mucho más bajo */
+    padding-top: 20px;
   }
 
   .imagen-decorativa {
-    width: 300px;
-  }
-
-  #cuadroImagen {
-    max-width: 320px;
-    margin: 0.3rem auto;
+    width: 260px; /* El corazón se hace más pequeño */
+    margin-top: -10px; /* Lo subimos un poco, pero no tanto como en PC */
   }
 
   .input-group {
-    margin: 1rem auto 0.5rem auto;
+    /* Este era el principal culpable: matamos el margen vertical excesivo */
+    margin: 2rem auto 1rem auto;
+    max-width: 90%;
+  }
+
+  /* Para evitar que se superpongan, en móvil quitamos el margen negativo */
+  #valorInput, 
+  #btnCalcular {
+    margin-top: 0;
+    height: 46px; /* Los hacemos un poquito más bajos */
+  }
+
+  #valorInput {
+      font-size: 15px;
+  }
+  
+  #btnCalcular {
+      font-size: 17px;
+  }
+
+  /* Reducimos el espacio del cuadro de la imagen/resultado */
+  #cuadroImagen {
+    max-width: 90%;
+    margin: 0.8rem auto;
   }
 
   .creditos {
-    font-size: 13px;
-    gap: 6px;
+    font-size: 12px;
+    gap: 5px;
+    margin-top: 0.8rem; /* Menos espacio arriba */
   }
-
+  
+  /* Hacemos el footer lo más pequeño posible para dar espacio */
   .footer {
-    height: 70px; /* 🔸 más bajo para encajar en pantalla */
-    padding-right: 30px;
+    height: 60px;
+    padding-right: 15px;
   }
 
   .footer-img {
     height: 70px;
+    left: 5px;
   }
 
   .btn-card {
-    height: 36px;
-    font-size: 16px;
-    padding: 0 18px;
+    height: 34px;
+    font-size: 14px;
+    padding: 0 16px;
   }
 }
