@@ -215,6 +215,7 @@ body {
   height: auto;
   border-radius: 12px;
   object-fit: contain;
+  margin-top: -40px; /* 🔼 sube la imagen */
 }
 
 /* Imagen simple centrada y con tamaño controlado */
@@ -243,6 +244,7 @@ body {
   letter-spacing: 1px;
   white-space: nowrap;
   width: 100%; /* ocupa todo el ancho */
+  margin-top: -25px; /* 🔼 sube la imagen */
 }
 
 .creditos a {
@@ -265,7 +267,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100vh;        /* toda la altura de la pantalla */
-  overflow: hidden;      /* sin scroll */
+      /* sin scroll */
   display: flex;
   flex-direction: column;
 }
@@ -277,7 +279,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  overflow: hidden;
+ 
 }
 
 .footer {
@@ -291,7 +293,7 @@ main {
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  overflow: hidden;
+ 
   padding-right: 60px;
 }
 
@@ -384,7 +386,7 @@ main {
   }
 
   .footer-img {
-    height: 70px;
+    height: 100px;
     left: 5px;
   }
 
