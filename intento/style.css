@@ -225,30 +225,27 @@ footer {
   object-fit: contain;
 }
 
-/* --- IMAGEN DEBAJO DEL INPUT (RESPONSIVE SIN DEFORMAR) --- */
+/* Imagen simple centrada y con tamaño controlado */
 #cuadroImagen {
   display: block;
-  width: 100%;            /* ocupa todo el ancho del contenedor */
-  max-width: 1000px;      /* límite en pantallas grandes */
-  height: auto;           /* mantiene proporciones */
-  aspect-ratio: 16 / 9;   /* 🔹 mantiene forma visual estable */
-  margin: 1rem auto;
+  width: 100%;
+  max-width: 420px;    /* mismo ancho que tu input */
+  height: auto;
+  margin: 0.6rem auto; /* <--- reduce el espacio superior/inferior */
   border-radius: 12px;
-  object-fit: contain;    /* evita recorte o estiramiento */
-  transition: all 0.3s ease;
-}
+  object-fit: contain;
+  
+  border: 6px solid transparent; /* si querés borde, cambialo */
+  }
 
-
-/* --- CRÉDITOS --- */
-.creditos {
+  .creditos {
   text-align: center;
-  font-family: 'Comic Sans MS', 'Fredoka One', 'Poppins', sans-serif;
+  font-family: 'Comic Sans MS', 'Fredoka One', 'Poppins', sans-serif; /* estilo redondeado, divertido */
   font-weight: 800;
   text-transform: uppercase;
-  color: #b40026;
-  font-size: clamp(0.8rem, 1vw, 1rem); /* 🔹 escala dinámicamente */
+  color: #b40026; /* rojo oscuro tipo el de la imagen */
+  font-size: 14px;
   letter-spacing: 1px;
-  margin-top: 1rem;
 }
 
 .creditos a {
@@ -262,113 +259,48 @@ footer {
 }
 
 .corazon {
-  color: #ff3366;
+  margin: 0 6px;
+  color: #ff3366; /* un rojo más claro para el corazón */
 }
 
-/* --- FOOTER --- */
-.footer {
-  width: 100%;
-  height: clamp(80px, 12vh, 150px); /* 🔹 altura flexible según la pantalla */
-  background-image: url('https://i.postimg.cc/tg7jZkFq/Heaven-buyee-comcotizador-20251016-212643-0000-2.png');
-  background-repeat: repeat;
-  background-size: auto;
-  background-position: center;
-  margin-top: auto;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-/* 🔹 Ajustes para pantallas pequeñas */
-@media (max-width: 576px) {
-  #cuadroImagen {
-    width: 95vw;
-    max-width: 500px;
-  }
-  .creditos {
-    font-size: 0.8rem;
-  }
-}
-
-/* 🔹 Ajustes para pantallas muy grandes */
-@media (min-width: 1200px) {
-  #cuadroImagen {
-    width: 70vw;
-    max-width: 1200px;
-  }
-  .footer {
-    height: 160px;
-  }
-}
-/* ======= Reglas para la columna principal: forzar centrado y que la imagen no salga del contenedor ======= */
-.col-12.col-md-8.col-lg-6 {
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;     /* centra input, imagen y créditos */
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-sizing: border-box;
 }
 
-/* Asegurarnos que el contenedor bootstrap no añada overflow inesperado */
-.container {
-  max-width: 100%;
-  width: 100%;
-}
-
-/* ======= IMAGEN RESPONSIVE: mantén forma y NO se deforme ni se salga ======= */
-#cuadroImagen {
-  display: block;
-  width: clamp(320px, 60vw, 900px); /* mínimo 320, ideal 60% del viewport, máximo 900 */
-  max-width: 100%;
-  height: auto;                     /* mantiene proporción real de la imagen */
-  margin: 1rem auto;
-  border-radius: 12px;
-  object-fit: contain;              /* evita recorte o estiramiento */
-  transition: width 0.25s ease, margin 0.25s ease;
-}
-
-/* Si querés que ocupe todo el ancho del contenedor padre (sin salirse) */
-.imagen-contenedor, .contenedor-imagen {
-  width: 100%;
+/* el contenedor del contenido ocupa el espacio disponible */
+main {
+  flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-/* ======= Créditos que escalan ======= */
-.creditos {
-  text-align: center;
-  font-weight: 800;
-  color: #b40026;
-  font-size: clamp(12px, 1.05vw, 14px); /* escala suave según pantalla */
-  margin-top: 0.9rem;
-  width: 100%;
-}
-
-/* ======= Footer flexible ======= */
+/* footer con tu patrón como tenías */
 .footer {
   width: 100%;
-  min-height: 80px;
-  height: auto;
+  height: 100px;
   background-image: url('https://i.postimg.cc/tg7jZkFq/Heaven-buyee-comcotizador-20251016-212643-0000-2.png');
   background-repeat: repeat;
   background-size: auto;
   background-position: center;
-  margin-top: auto;
 }
-
-/* ======= Media queries para tablet y móvil ======= */
-@media (max-width: 1024px) {
-  /* menos separación superior para que no se desplace todo hacia abajo en tablet */
-  .container-patron { padding-top: 20px; min-height: 150px; }
-
-  /* la imagen puede usar más porcentaje en pantallas intermedias */
-  #cuadroImagen { width: clamp(300px, 80vw, 800px); }
-
-  /* Reducir márgenes y tamaños de botones/inputs si es necesario */
-  .input-group { margin: 2rem auto 1rem auto; max-width: 92%; }
-  #valorInput, #btnCalcular { height: 46px; font-size: 0.95rem; }
+main > *:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
+@media (min-width: 768px) {
+  .header-mini span {
+    font-size: 1.4rem;
+  }
 
-@media (max-width: 420px) {
-  /* celulares: ajustar aún más */
-  #cuadroImagen { width: 95vw; max-width: 420px; }
-  .creditos { font-size: 11px; }
+  .footer {
+    min-height: 120px;
+  }
 }
