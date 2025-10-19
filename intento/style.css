@@ -266,10 +266,10 @@ body {
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;        /* toda la altura de la pantalla */
-      /* sin scroll */
+  height: 100vh; /* toda la altura de la pantalla */
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* sin scroll en PC */
 }
 
 /* 🔹 El contenido principal ocupa todo el espacio libre entre header y footer */
@@ -279,7 +279,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
- 
+  overflow: hidden;
 }
 
 .footer {
@@ -293,7 +293,7 @@ main {
   justify-content: flex-end;
   align-items: center;
   position: relative;
- 
+  overflow: hidden;
   padding-right: 60px;
 }
 
@@ -327,7 +327,17 @@ main {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0 #b81e32;
 }
+/* 💡 En celulares, permitir scroll si el contenido no entra */
+@media (max-width: 768px) {
+  html, body {
+    height: auto;
+    overflow-y: auto; /* deja scrollear si hace falta */
+  }
 
+  main {
+    overflow: visible; /* asegura que el footer no se oculte */
+  }
+}
 
 
 //* ============================================= */
@@ -386,7 +396,7 @@ main {
   }
 
   .footer-img {
-    height: 100px;
+    height: 70px;
     left: 5px;
   }
 
