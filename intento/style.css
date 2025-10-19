@@ -6,6 +6,21 @@ body {
   background-color: #ffcee4;
 }
 
+
+.nerko-one-regular {
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.manrope-regular { 
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 footer {
   margin-top: auto; /* empuja el footer al final */
 }
@@ -83,10 +98,11 @@ footer {
 
 /* --- HEADER MINI DECORATIVO --- */
 .header-mini {
-  background-color: #d62839; /* podés cambiar a #ff4d6d si querés más rosado */
-  color: white;
+  background-color: #b61733; /* podés cambiar a #ff4d6d si querés más rosado */
+  color: #ffcee4;
   font-size: 0.9rem;
-  height: 34px;
+  font-family: "Nerko One", cursive;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,8 +183,9 @@ footer {
   background-color: #f89abf;
   box-shadow: 4px 4px 0 #c9254c;
   padding: 0 20px;
-  font-size: 16px;
-  color: white;  
+  font-size: 19px;
+  font-family: 'Manrope', sans-serif;
+  color: #fbadce;  
   text-align: center;
   outline: none;
 }
@@ -182,7 +199,8 @@ footer {
   height: 50px;
   padding: 0 25px;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: "Nerko One", cursive;
   box-shadow: 4px 4px 0 #b81e32;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -197,10 +215,12 @@ footer {
 
 /* Placeholder blanco dentro del input */
 #valorInput::placeholder {
-  color: white;            /* 🌸 texto blanco */
+  color: #ffcee4;            /* 🌸 texto blanco */
   opacity: 1;              /* asegura que no quede gris */
   text-align: center;      /* centrado */
   font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+
 }
 
 /* --- CONTENEDOR DE IMAGEN DEBAJO DEL INPUT --- */
@@ -239,28 +259,34 @@ footer {
   }
 
   .creditos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espacio entre elementos */
   text-align: center;
-  font-family: 'Comic Sans MS', 'Fredoka One', 'Poppins', sans-serif; /* estilo redondeado, divertido */
-  font-weight: 800;
+  font-family: "Nerko One", cursive;
   text-transform: uppercase;
-  color: #b40026; /* rojo oscuro tipo el de la imagen */
-  font-size: 14px;
+  color: #b40026;
+  font-size: 24px;
   letter-spacing: 1px;
+  white-space: nowrap; /* evita saltos de línea */
 }
 
+/* Links */
 .creditos a {
   color: #b40026;
   text-decoration: none;
-  margin: 0 5px;
+  font-family: "Nerko One", cursive;
 }
 
 .creditos a:hover {
   text-decoration: underline;
 }
 
+/* Corazón */
 .corazon {
-  margin: 0 6px;
-  color: #ff3366; /* un rojo más claro para el corazón */
+  color: #ff3366;
+  font-size: 26px;
 }
 
 html, body {
