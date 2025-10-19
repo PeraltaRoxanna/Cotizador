@@ -125,6 +125,7 @@ body {
   width: 370px; /*  ajustá según te guste */
   height: auto;
   z-index: 2;
+  margin-top: -25px; /* sube la imagen, ajustá el valor */
 }
 .header-mini {
   margin-bottom: 0;
@@ -138,8 +139,9 @@ body {
   align-items: center;
   gap: 10px;
   width: 100%;
-  max-width: 420px;
+  max-width: 450px;
   margin: 5rem auto 1.5rem auto;
+  
 }
 
 /* 🔹 Input rosa con sombra y texto centrado */
@@ -156,6 +158,7 @@ body {
   color: #fbadce;  
   text-align: center;
   outline: none;
+  margin-top: -25px; /* sube la imagen, ajustá el valor */
 }
 
 /* 🔹 Botón redondo tipo “bubble” */
@@ -172,6 +175,7 @@ body {
   box-shadow: 4px 4px 0 #b81e32;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-top: -25px; /* sube la imagen, ajustá el valor */
 }
 
 /* 🔹 Efecto al pasar el mouse */
