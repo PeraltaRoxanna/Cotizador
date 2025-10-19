@@ -332,7 +332,7 @@ main > *:last-child {
   }
 }
 .footer {
-  width: 100%;
+  width: 105%;
   height: 100px;
   background-color: #ff4f75; /* mismo fondo que tu estilo actual */
   display: flex;
@@ -343,7 +343,7 @@ main > *:last-child {
 
 /* imagen decorativa */
 .footer-img {
-  height: 100px; /* ajustá según se vea */
+  height: 105px; /* ajustá según se vea */
   width: auto;
   object-fit: contain;
 }
@@ -354,7 +354,7 @@ main > *:last-child {
   color: #a8002a;
   border: 2px solid #b81e32;
   border-radius: 1000px;
-  height: 50px;
+  height: 40px;
   padding: 0 25px;
   font-weight: 800;
   font-size: 20px;
