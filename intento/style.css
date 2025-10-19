@@ -127,7 +127,7 @@ footer {
   height: 240px; /* 🔸 ajustá según necesites */
   background-image: url("https://i.pinimg.com/736x/a7/d3/a1/a7d3a1dbb1894f47a43e7a73282fce78.jpg");
   background-repeat: repeat;        /* se repite en toda la pantalla */
-  background-size: auto;            /* mantiene su tamaño original */
+  background-size: 450px;            /* mantiene su tamaño original */
   background-position: top center;  /* centrado y alineado arriba */
   display: flex;
   justify-content: center;          /* centra horizontalmente */
