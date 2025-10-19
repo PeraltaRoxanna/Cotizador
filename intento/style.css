@@ -119,6 +119,7 @@ body {
   align-items: flex-start;
   padding-top: 40px;
   margin: 0;
+  position: relative; /* 👈 necesario para que los hijos absolutos se posicionen dentro */
 }
 
 /* --- IMAGEN DECORATIVA (corazón) --- */
@@ -128,6 +129,17 @@ body {
   z-index: 2;
   margin-top: -25px; /* 🔼 sube la imagen */
 }
+
+/* --- GIF ENCIMA DEL CORAZÓN --- */
+.gif-decorativo {
+  position: absolute;
+  top: 50px;          /* ajustá según quieras más arriba o abajo */
+  width: 240px;       /* tamaño del gif */
+  height: auto;
+  z-index: 3;         /* más alto que el corazón */
+  pointer-events: none; /* evita que tape clics */
+}
+
 .header-mini {
   margin-bottom: 0; 
   border-radius: 0;
@@ -159,6 +171,7 @@ body {
   text-align: center;
   outline: none;
   margin-top: -25px; /* sube la imagen, ajustá el valor */
+  font-size: clamp(14px, 4vw, 20px); /* 🔹 Se adapta entre 14px y 20px */
 }
 
 /* 🔹 Botón redondo tipo “bubble” */
