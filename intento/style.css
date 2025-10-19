@@ -325,35 +325,6 @@ main {
 
 
 /* --- AJUSTES RESPONSIVOS --- */
-@media (max-height: 700px) {
-  main {
-    height: 75%; /* más espacio al footer en pantallas bajitas */
-  }
-
-  .footer {
-    height: 25vh;
-  }
-
-  .footer-img {
-    height: 100%;
-  }
-
-  .btn-card {
-    height: 40px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    justify-content: center; /* centra el botón en móviles */
-    padding-right: 0;
-  }
-
-  .footer-img {
-    display: none; /* oculta imagen si no entra bien */
-  }
-}
 /* --- 🔹 Versión móvil sin scroll --- */
 @media (max-height: 750px) {
   body {
