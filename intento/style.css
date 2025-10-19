@@ -9,7 +9,7 @@ body {
 
 .nerko-one-regular {
   font-family: "Nerko One", cursive;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -100,7 +100,7 @@ footer {
 .header-mini {
   background-color: #b61733; /* podés cambiar a #ff4d6d si querés más rosado */
   color: #ffcee4;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: "Nerko One", cursive;
   height: 40px;
   display: flex;
@@ -118,7 +118,7 @@ footer {
 }
 
 .header-text {
-  font-size: 0.6rem;
+  font-size: 1.2rem;
   margin: 0 auto;
 }
 
@@ -267,7 +267,7 @@ footer {
   font-family: "Nerko One", cursive;
   text-transform: uppercase;
   color: #b40026;
-  font-size: 14px;
+  font-size: 17px;
   letter-spacing: 1px;
   white-space: nowrap;
   width: 100%; /* ocupa todo el ancho */
@@ -331,3 +331,45 @@ main > *:last-child {
     min-height: 120px;
   }
 }
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #ff4f75; /* mismo fondo que tu estilo actual */
+  display: flex;
+  justify-content: flex-end; /* botón a la derecha */
+  align-items: center; /* centrado vertical */
+  padding-right: 40px;
+}
+
+/* imagen decorativa */
+.footer-img {
+  height: 100px; /* ajustá según se vea */
+  width: auto;
+  object-fit: contain;
+}
+
+/* botón igual al de Calcular */
+.btn-card {
+  background-color: #f89abf;
+  color: #a8002a;
+  border: 2px solid #b81e32;
+  border-radius: 1000px;
+  height: 50px;
+  padding: 0 25px;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: "Nerko One", cursive;
+  box-shadow: 4px 4px 0 #b81e32;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 0px; /* 🔸 empuja el botón hacia la derecha */
+}
+
+
+
+.btn-card:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #b81e32;
+}
+
+
