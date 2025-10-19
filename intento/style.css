@@ -21,22 +21,6 @@ body {
   font-style: normal;
 }
 
-footer {
-  margin-top: auto; /* empuja el footer al final */
-}
-
-footer p, footer a {
-  margin: 0; /* elimina márgenes por defecto */
-}
-
-
-/* --- RESULTADO --- */
-.resultado {
-  font-size: 1.5rem;
-  font-weight: bold;
-  min-height: 2rem; /* Le da un alto mínimo para que no salte el layout */
-}
-}
 
 /* --- BOTONES --- */
 #valorInput {
@@ -52,10 +36,6 @@ footer p, footer a {
   width: 100%;
   max-width: 420px;
   margin: 1.5rem auto 0.5rem auto; /* 🔹 mucho menos espacio arriba */
-}
-
-#botonLink {
-  margin-bottom: 0; /* elimina cualquier separación fantasma entre el input y el contenedor */
 }
 
 
@@ -82,18 +62,6 @@ footer p, footer a {
 .boton-pacifico:hover {
   background-color: #e73370; /* un rosa más oscuro al pasar */
   transform: scale(1.05);
-}
-
-a.text-white:hover {
-  color: #0dcaf0 !important;
-}
-
-
-footer {
-  background-color: #1789b6; /* nuevo color de fondo */
-  color: #ffffff;            /* texto en blanco */
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 /* --- HEADER MINI DECORATIVO --- */
@@ -308,55 +276,46 @@ main {
   overflow: hidden;
 }
 
-/* footer con tu patrón como tenías */
 .footer {
   width: 100%;
-  height: 120px;
+  height: 80px; /* 🔹 más bajito */
   background-image: url('https://i.postimg.cc/tg7jZkFq/Heaven-buyee-comcotizador-20251016-212643-0000-2.png');
   background-repeat: repeat;
-  background-size: auto;
+  background-size: 200px;
   background-position: center;
-}
-
-/* 🔹 Footer fijo al fondo, sin generar scroll */
-.footer {
-  width: 100%;
-  height: 100px; /* ajustá si querés más espacio */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 40px;
   position: relative;
-  flex-shrink: 0;
+  overflow: hidden;
+  padding-right: 60px;
 }
 
-/* 🔹 Imagen dentro del footer */
+/* imagen del perrito decorativa */
 .footer-img {
-  height: 130px; /* 🔸 más grande */
+  position: absolute;
+  left: 25px;
+  bottom: 5px;
+  height: 90px; /* 🔸 más pequeño */
   width: auto;
   object-fit: contain;
-  position: absolute;
-  left: 10px; /* la ubica a la izquierda */
-  bottom: 0;
 }
 
-/* 🔹 Botón igual al de COTIZAR */
+/* botón igual al de calcular */
 .btn-card {
   background-color: #f89abf;
   color: #a8002a;
   border: 2px solid #b81e32;
   border-radius: 1000px;
-  height: 45px;
-  padding: 0 25px;
+  height: 40px;
+  padding: 0 22px;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 17px;
   font-family: "Nerko One", cursive;
   box-shadow: 4px 4px 0 #b81e32;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-right: 0px;
-
-
+}
 
 .btn-card:hover {
   transform: translate(2px, 2px);
@@ -364,3 +323,34 @@ main {
 }
 
 
+
+/* --- AJUSTES RESPONSIVOS --- */
+@media (max-height: 700px) {
+  main {
+    height: 75%; /* más espacio al footer en pantallas bajitas */
+  }
+
+  .footer {
+    height: 25vh;
+  }
+
+  .footer-img {
+    height: 100%;
+  }
+
+  .btn-card {
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    justify-content: center; /* centra el botón en móviles */
+    padding-right: 0;
+  }
+
+  .footer-img {
+    display: none; /* oculta imagen si no entra bien */
+  }
+}
