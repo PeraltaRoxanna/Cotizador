@@ -297,14 +297,15 @@ main {
   padding-right: 60px;
 }
 
-/* imagen del perrito decorativa */
+/* 🐶 Imagen decorativa del footer */
 .footer-img {
   position: absolute;
   left: 25px;
-  bottom: 5px;
-  height: 90px; /* 🔸 más pequeño */
+  bottom: 0;           /* 🔹 La baja completamente al fondo */
+  height: 100px;       /* 🔹 Más grande */
   width: auto;
   object-fit: contain;
+  transform: translateY(10px); /* 🔹 La baja un poquito más visualmente */
 }
 
 /* botón igual al de calcular */
