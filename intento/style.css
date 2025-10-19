@@ -354,3 +354,52 @@ main {
     display: none; /* oculta imagen si no entra bien */
   }
 }
+/* --- 🔹 Versión móvil sin scroll --- */
+@media (max-height: 750px) {
+  body {
+    overflow: hidden; /* evita que aparezca scroll */
+  }
+
+  main {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .container-patron {
+    height: 160px; /* 🔸 más compacto */
+    padding-top: 25px;
+  }
+
+  .imagen-decorativa {
+    width: 300px;
+  }
+
+  #cuadroImagen {
+    max-width: 320px;
+    margin: 0.3rem auto;
+  }
+
+  .input-group {
+    margin: 1rem auto 0.5rem auto;
+  }
+
+  .creditos {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .footer {
+    height: 70px; /* 🔸 más bajo para encajar en pantalla */
+    padding-right: 30px;
+  }
+
+  .footer-img {
+    height: 70px;
+  }
+
+  .btn-card {
+    height: 36px;
+    font-size: 16px;
+    padding: 0 18px;
+  }
+}
