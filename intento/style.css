@@ -259,20 +259,20 @@ footer {
   }
 
   .creditos {
-  display: inline-flex;
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
   align-items: center;
-  justify-content: center;
-  gap: 10px; /* Espacio entre elementos */
+  gap: 10px; /* espacio entre cada elemento */
   text-align: center;
   font-family: "Nerko One", cursive;
   text-transform: uppercase;
   color: #b40026;
-  font-size: 24px;
+  font-size: 14px;
   letter-spacing: 1px;
-  white-space: nowrap; /* evita saltos de línea */
+  white-space: nowrap;
+  width: 100%; /* ocupa todo el ancho */
 }
 
-/* Links */
 .creditos a {
   color: #b40026;
   text-decoration: none;
@@ -283,10 +283,11 @@ footer {
   text-decoration: underline;
 }
 
-/* Corazón */
 .corazon {
   color: #ff3366;
   font-size: 26px;
+}
+
 }
 
 html, body {
