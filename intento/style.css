@@ -385,14 +385,14 @@ main {
   }
 
   .imagen-decorativa {
-    width: 260px; /* El corazón se hace más pequeño */
+    width: 290px; /* El corazón se hace más pequeño */
     margin-top: -10px; /* Lo subimos un poco, pero no tanto como en PC */
   }
 
   .input-group {
     /* Este era el principal culpable: matamos el margen vertical excesivo */
-    margin: 3rem auto 1rem auto;
-    max-width: 90%;
+    margin: 5rem auto 1rem auto;
+    max-width: 100%;
   }
 
   /* Para evitar que se superpongan, en móvil quitamos el margen negativo */
@@ -412,7 +412,7 @@ main {
 
   /* Reducimos el espacio del cuadro de la imagen/resultado */
   #cuadroImagen {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0.8rem auto;
   }
 
@@ -440,7 +440,7 @@ main {
   }
   .gif-decorativo {
     /* El GIF de PC medía 240px. Lo achicamos para el celu. */
-    width: 170px; 
+    width: 190px; 
     
     /* Lo subimos para que se ajuste al corazón más chico */
     top: 30px; 
@@ -594,23 +594,38 @@ main {
   padding: 5px;
   left: 50%;
   transform: translateX(-50%); 
-  font-size: clamp(20px, 4vw, 50px); /* (Tu clamp que escala) */
+  font-size: clamp(20px, 4vw, 50px);
 
   /* --- AJUSTES PARA PC (ej. 53% y 38%) --- */
   top: 57%;
   width: 18%;
 }
 
-
-/* --- 2. REGLA APARTE (para Celulares Chicos) --- */
-/*
-  Igual que tu GIF: Si la pantalla mide 500px o MENOS,
-  se aplican estos cambios.
-*/
 @media (max-width: 500px) {
   .calculator-screen {
-    /* (Ajusta estos valores para que se vea perfecto en CELULAR) */
-    top: 5%;
+    top: 53%;
     width: 23%;
+  }
+}
+@media (min-width: 375px) {
+  .calculator-screen {
+    /* (Ajusta estos valores para que se vea bien en un celu mediano) */
+    top: 49%;
+    width: 18%;
+  }
+}
+
+@media (min-width: 480px) {
+  .calculator-screen {
+    /* (Ajusta estos valores para que se vea bien en un celu grande) */
+    top: 52%;
+    width: 40%;
+  }
+}
+@media (min-width: 768px) {
+  .calculator-screen {
+    /* (Tus valores de PC) */
+    top: 57%;
+    width: 10%;
   }
 }
