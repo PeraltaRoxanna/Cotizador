@@ -30,7 +30,14 @@ btn.addEventListener('click', () => {
   }
 });
 
+// 1. Busca el botón en el documento por su ID
+  const miBoton = document.getElementById("btnCalcular");
 
+  // 2. Le dice al botón que "escuche" un clic
+  miBoton.addEventListener("click", function() {
+    // 3. Cuando ocurra el clic, redirige a la página 2
+    window.location.href = "resultado.html";
+  });
 
 
 

@@ -77,6 +77,7 @@ body {
   position: relative;
   border-radius: 0 0 6px 6px;
   letter-spacing: 0.5px;
+  z-index: 10;
 }
 
 .hearts {
@@ -327,19 +328,24 @@ main {
   color: #a8002a;
   border: 2px solid #b81e32;
   border-radius: 1000px;
-  height: 40px;
-  padding: 0 22px;
+  height: 50px;
+  padding: 0 15px;
   font-weight: 800;
-  font-size: 17px;
+  font-size: 20px;
   font-family: "Nerko One", cursive;
   box-shadow: 4px 4px 0 #b81e32;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-card:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #b81e32;
+ 
+  background-color: #ff5e8d;
+  transform: translateY(-2px);
 }
 /* 💡 En celulares, permitir scroll si el contenido no entra */
 @media (max-width: 768px) {
@@ -419,4 +425,61 @@ main {
     font-size: 14px;
     padding: 0 16px;
   }
+}
+
+.resultado-page {
+  
+
+  background-color: #ffcee4; 
+  background-image: url('https://i.postimg.cc/xdwVXN2x/Heaven-buyee-comcotizador-Fondo-de-pantalla-para-tel-fono-20251018-214254-0000.png'); 
+  background-repeat: repeat; 
+  background-attachment: fixed; 
+  min-height: 100vh;
+  margin: 0; 
+  position: relative;
+  overflow: hidden;
+}
+.main-content {
+  /* Usamos Flexbox para centrar todo el contenido verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Espacio a los lados */
+  position: relative; 
+  z-index: 50; 
+}
+
+.main-content .cat-image {
+  max-width: 90%; /* Que no se pase del ancho de la pantalla */
+  width: 450px; /* Un tamaño máximo fijo, ajústalo si te gusta más grande o chico */
+  object-fit: contain;
+  display: block; /* Quita espacios raros */
+}
+
+/* Estilos para la caja rosa */
+.main-content .info-box {
+  background-color: #F8B0C8; 
+  color: #5D434B; 
+  padding: 15px 20px;
+  border-radius: 0px; 
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+
+  margin-top: -10px; /* Se pega al gato */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-sizing: border-box; 
+}
+
+/* Quita el margen que trae el <p> de adentro */
+.main-content .info-box p {
+  margin: 0;
+}
+
+/* Estilos para el enlace "Volver" */
+.main-content a {
+  font-size: 1rem;
+  color: #b61733;
+  font-weight: bold;
+  margin-top: 30px; /* Aumentamos el margen para dar espacio */
 }
