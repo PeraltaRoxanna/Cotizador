@@ -488,7 +488,12 @@ main {
  font-size: 1rem;
   color: #b40026;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 0px;
+  display: flex;             /* 1. Los pone en fila */
+  justify-content: center; /* 2. Los centra en la fila */
+  align-items: center;     /* 3. Los alinea verticalmente (por el corazón) */
+  gap: 1px;               /* 4. Les da espacio entre ellos */
+  flex-wrap: wrap;         /* 5. Si la pantalla es muy chica, se bajan ordenadamente */
 }
 
 
@@ -496,14 +501,17 @@ main {
 .main-content a {
   font-size: 1rem;
   color: #b40026;
-  font-weight: bold;
-  margin-top: 30px; /* Aumentamos el margen para dar espacio */
+  font-weight: bold; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 /* ---- BOTONES DENTRO DEL GLOBO DE DIÁLOGO ---- */
 .dialog-buttons {
   position: absolute; /* Posición absoluta para flotar sobre el gato */
-  top: 21%; /* Ajusta según sea necesario */
+  top: 27%; /* Ajusta según sea necesario */
   left:43%; /* Centra horizontalmente */
   transform: translateX(-50%); /* Ajuste fino para centrar exactamente */
   z-index: 20; /* Asegura que los botones estén encima del gato */
