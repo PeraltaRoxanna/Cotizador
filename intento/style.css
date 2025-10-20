@@ -515,10 +515,10 @@ main {
   color: #a8002a;
   border: 2px solid #b81e32;
   border-radius: 1000px;
-  height: 30px;
-  padding: 0 15px;
+  height: clamp(20px, 8vw, 20px);
+  padding: 0 clamp(10px, 3vw, 15px);
   font-weight: 800;
-  font-size: 20px;
+  font-size: clamp(12px, 3.5vw, 18px);
   font-family: "Nerko One", cursive;
   box-shadow: 4px 4px 0 #b81e32; /* ¡Aquí está la sombra que querías! */
   cursor: pointer;
