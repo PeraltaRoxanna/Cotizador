@@ -146,11 +146,12 @@ body {
 /* --- GIF ENCIMA DEL CORAZÓN --- */
 .gif-decorativo {
   position: absolute;
-  top: 50px;          /* ajustá según quieras más arriba o abajo */
-  width: 240px;       /* tamaño del gif */
+  top: 48px;          /* ajustá según quieras más arriba o abajo */
+  width: 250px;       /* tamaño del gif */
   height: auto;
   z-index: 3;         /* más alto que el corazón */
   pointer-events: none; /* evita que tape clics */
+
 }
 
 .header-mini {
@@ -390,7 +391,7 @@ main {
 
   .input-group {
     /* Este era el principal culpable: matamos el margen vertical excesivo */
-    margin: 2rem auto 1rem auto;
+    margin: 3rem auto 1rem auto;
     max-width: 90%;
   }
 
@@ -402,7 +403,7 @@ main {
   }
 
   #valorInput {
-      font-size: 15px;
+      font-size: 12px;
   }
   
   #btnCalcular {
@@ -436,6 +437,13 @@ main {
     height: 34px;
     font-size: 14px;
     padding: 0 16px;
+  }
+  .gif-decorativo {
+    /* El GIF de PC medía 240px. Lo achicamos para el celu. */
+    width: 170px; 
+    
+    /* Lo subimos para que se ajuste al corazón más chico */
+    top: 30px; 
   }
 }
 
@@ -573,39 +581,36 @@ main {
 
 /* --- Estilos para la Pantalla de la Calculadora --- */
 
+/* --- 1. ESTILOS POR DEFECTO (Así se ve en PC/Pantallas Grandes) --- */
+/*
+  Ajusta estos valores para que se vea perfecto en tu PC.
+  Estos son los estilos base.
+*/
 .calculator-screen {
   position: absolute; 
-  top: 53%;   
-  left: 48%;
-  transform: translateX(-50%); /* Centrado horizontal */
-  width: 30%; /* Ancho de la pantalla (ajusta si es necesario) */
-  
- 
-  font-family: "Press Start 2P", monospace; 
- font-size: clamp(20px, 4vw, 33px);;
-  color: #ffffff; 
+  font-family: 'Pixelify Sans', monospace;
+  color: #ffffff;
   text-align: right;
   padding: 5px;
-  
-  
+  left: 50%;
+  transform: translateX(-50%); 
+  font-size: clamp(20px, 4vw, 50px); /* (Tu clamp que escala) */
+
+  /* --- AJUSTES PARA PC (ej. 53% y 38%) --- */
+  top: 57%;
+  width: 18%;
 }
-@media (min-width: 768px) {
-  
-  .calculator-screen {
-    /* Sobrescribimos solo los valores que cambian en PC */
-    /* (¡Tendrás que encontrar los números perfectos para PC!) */
-    
-    /* --- AJUSTES NUEVOS PARA PC --- */
-    top: 57%;   /* (Ejemplo: quizás en PC tiene que estar más abajo) */
-    width:27%; /* (Ejemplo: quizás en PC tiene que ser más angosto) */
-  }
 
-    }
 
-  @media (min-width: 400px) {
+/* --- 2. REGLA APARTE (para Celulares Chicos) --- */
+/*
+  Igual que tu GIF: Si la pantalla mide 500px o MENOS,
+  se aplican estos cambios.
+*/
+@media (max-width: 500px) {
   .calculator-screen {
-    /* (Ajusta estos valores para que se vea bien en un celu grande) */
-    top: 49%;   /* (Ejemplo: quizás necesita bajar un poco) */
-    width: 40%; /* (Ejemplo: quizás necesita ser un poco más angosto) */
+    /* (Ajusta estos valores para que se vea perfecto en CELULAR) */
+    top: 54%;
+    width: 23%;
   }
 }
