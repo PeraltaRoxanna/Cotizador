@@ -451,11 +451,9 @@ main {
 /* Nuevo contenedor para Gato + Botones */
 .cat-wrapper {
   position: relative; /* ¡Clave! Para que los botones se posicionen dentro de él */
-  
-  /* Le pasamos el tamaño que antes tenía la imagen */
-  max-width: 90%; 
-  width: 450px; 
-  margin-top: -50px; /* Mantenemos el margen negativo para subirlo */
+  max-width: 100%; 
+  width: 500px; 
+  margin-top: -35px; /* Mantenemos el margen negativo para subirlo */
 }
 
 .main-content .cat-image {
@@ -498,8 +496,8 @@ main {
 /* ---- BOTONES DENTRO DEL GLOBO DE DIÁLOGO ---- */
 .dialog-buttons {
   position: absolute; /* Posición absoluta para flotar sobre el gato */
-  top: 28%; /* Ajusta según sea necesario */
-  left:36%; /* Centra horizontalmente */
+  top: 21%; /* Ajusta según sea necesario */
+  left:43%; /* Centra horizontalmente */
   transform: translateX(-50%); /* Ajuste fino para centrar exactamente */
   z-index: 20; /* Asegura que los botones estén encima del gato */
   display: flex; /* Para que los botones estén uno al lado del otro */
@@ -507,6 +505,7 @@ main {
   flex-wrap: wrap; /* Si la p ntalla es pequeña, se apilan */
   justify-content: center; /* Centra los botones si se envuelven */
   width: 90%;
+  align-items: center;
 }
 
 .btn-dialog {
@@ -515,19 +514,19 @@ main {
   color: #a8002a;
   border: 2px solid #b81e32;
   border-radius: 1000px;
-  height: clamp(20px, 8vw, 20px);
-  padding: 0 clamp(10px, 3vw, 15px);
+  height: clamp(18px, 6vw, 30px);
+  padding: 0 clamp(5px, 2vw, 10px);
   font-weight: 800;
-  font-size: clamp(12px, 3.5vw, 18px);
+  font-size: clamp(8px, 2.5vw, 12px);
   font-family: "Nerko One", cursive;
-  box-shadow: 4px 4px 0 #b81e32; /* ¡Aquí está la sombra que querías! */
+  box-shadow: 4px 1px 0 #b81e32; /* ¡Aquí está la sombra que querías! */
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  color: #a8002a !important;
   /* Propiedad útil que tenías en el original */
   white-space: nowrap; 
 }
