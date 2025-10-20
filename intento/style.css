@@ -442,7 +442,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px 20px 20px;
+  padding: 20px 0;
   padding-bottom: 20px;
   position: relative; 
   z-index: 50; 
@@ -472,7 +472,7 @@ main {
   text-align: center;
   font-size: 0.9rem;
   font-style: italic;
-  margin-top: -10px; /* Se pega al gato */
+  margin-top: 0px; /* Se pega al gato */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   box-sizing: border-box; 
   position: relative; /* Activa el apilamiento de capas */
@@ -480,15 +480,22 @@ main {
 
 }
 
-/* Quita el margen que trae el <p> de adentro */
 .main-content .info-box p {
   margin: 0;
 }
 
+.main-content .creditos {
+ font-size: 1rem;
+  color: #b40026;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+
 /* Estilos para el enlace "Volver" */
 .main-content a {
   font-size: 1rem;
-  color: #f89abf;
+  color: #b40026;
   font-weight: bold;
   margin-top: 30px; /* Aumentamos el margen para dar espacio */
 }
