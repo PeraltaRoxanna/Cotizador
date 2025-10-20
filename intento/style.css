@@ -30,7 +30,7 @@ body {
 
 .press-start-2p-regular {
   font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -579,22 +579,15 @@ main {
   transform: translateY(-2px);
 }
 
-/* --- Estilos para la Pantalla de la Calculadora --- */
-
-/* --- 1. ESTILOS POR DEFECTO (Así se ve en PC/Pantallas Grandes) --- */
-/*
-  Ajusta estos valores para que se vea perfecto en tu PC.
-  Estos son los estilos base.
-*/
 .calculator-screen {
   position: absolute; 
-  font-family: 'Pixelify Sans', monospace;
+  font-family: 'Press Start 2P', monospace;
   color: #ffffff;
   text-align: right;
   padding: 5px;
   left: 50%;
   transform: translateX(-50%); 
-  font-size: clamp(20px, 4vw, 50px);
+  font-size: clamp(15px, 4vw, 50px);
 
   /* --- AJUSTES PARA PC (ej. 53% y 38%) --- */
   top: 57%;
@@ -611,7 +604,7 @@ main {
   .calculator-screen {
     /* (Ajusta estos valores para que se vea bien en un celu mediano) */
     top: 49%;
-    width: 18%;
+    width: 40%;
   }
 }
 
@@ -619,13 +612,14 @@ main {
   .calculator-screen {
     /* (Ajusta estos valores para que se vea bien en un celu grande) */
     top: 52%;
-    width: 40%;
+    width: 20%;
   }
 }
 @media (min-width: 768px) {
   .calculator-screen {
     /* (Tus valores de PC) */
     top: 57%;
-    width: 10%;
+    width: 25%;
+    font-size: 30px;
   }
 }
