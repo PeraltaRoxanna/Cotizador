@@ -21,6 +21,18 @@ body {
   font-style: normal;
 }
 
+.pixelify-sans-regular  {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* --- BOTONES --- */
 #valorInput {
@@ -360,7 +372,7 @@ main {
 }
 
 
-//* ============================================= */
+/* ============================================= */
 /* --- AJUSTES RESPONSIVOS PARA VISTA MÓVIL --- */
 /* (Solo para pantallas de 500px o menos)    */
 /* ============================================= */
@@ -553,7 +565,7 @@ main {
 }
 
 .btn-dialog:hover {
-  background-color: #ec4463; /* Invierte los colores al pasar el ratón */
+  background-color: #ec4463; 
   color: #F8B0C8;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
   transform: translateY(-2px);
@@ -562,24 +574,38 @@ main {
 /* --- Estilos para la Pantalla de la Calculadora --- */
 
 .calculator-screen {
-  position: absolute; /* Flota sobre el .cat-wrapper */
-  
-  /* --- ¡AJUSTA ESTOS VALORES! --- */
-  /* Posición (tendrás que probarlos hasta que quede perfecto) */
-  top: 57%;   /* 73% desde arriba de la imagen */
+  position: absolute; 
+  top: 53%;   
   left: 48%;
   transform: translateX(-50%); /* Centrado horizontal */
+  width: 30%; /* Ancho de la pantalla (ajusta si es necesario) */
   
-  width: 20%; /* Ancho de la pantalla (ajusta si es necesario) */
-  
-  /* --- Estilos del Texto (Pixelado) --- */
-  font-family: 'Pixelify Sans', 'Courier New', monospace; /* Importa Pixelify Sans si la tienes */
-  font-size: clamp(16px, 4vw, 30px); /* Tamaño de letra responsive */
-  color: #ffffff; /* Color de "pantalla LCD" oscuro */
+ 
+  font-family: "Press Start 2P", monospace; 
+ font-size: clamp(20px, 4vw, 33px);;
+  color: #ffffff; 
   text-align: right;
   padding: 5px;
   
-  /* (Opcional) para que parezca más una pantalla */
-  /* background-color: rgba(255, 255, 255, 0.1); */
-  /* border-radius: 5px; */
+  
+}
+@media (min-width: 768px) {
+  
+  .calculator-screen {
+    /* Sobrescribimos solo los valores que cambian en PC */
+    /* (¡Tendrás que encontrar los números perfectos para PC!) */
+    
+    /* --- AJUSTES NUEVOS PARA PC --- */
+    top: 57%;   /* (Ejemplo: quizás en PC tiene que estar más abajo) */
+    width:27%; /* (Ejemplo: quizás en PC tiene que ser más angosto) */
+  }
+
+    }
+
+  @media (min-width: 400px) {
+  .calculator-screen {
+    /* (Ajusta estos valores para que se vea bien en un celu grande) */
+    top: 49%;   /* (Ejemplo: quizás necesita bajar un poco) */
+    width: 40%; /* (Ejemplo: quizás necesita ser un poco más angosto) */
+  }
 }
