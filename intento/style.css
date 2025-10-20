@@ -181,7 +181,7 @@ body {
   padding: 0 20px;
   font-size: 19px;
   font-family: 'Manrope', sans-serif;
-  color: #fbadce;  
+  color: #ffffff;  
   text-align: center;
   outline: none;
   margin-top: -25px; /* sube la imagen, ajustá el valor */
@@ -610,7 +610,7 @@ main {
 @media (max-width: 500px) {
   .calculator-screen {
     /* (Ajusta estos valores para que se vea perfecto en CELULAR) */
-    top: 54%;
+    top: 5%;
     width: 23%;
   }
 }
