@@ -455,7 +455,9 @@ main {
   min-height: 100vh;
   margin: 0; 
   position: relative;
-  overflow: hidden;
+  /* Permitir scroll vertical para que el footer sea accesible en PC */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .main-content {
   /* Usamos Flexbox para centrar todo el contenido verticalmente */
@@ -678,5 +680,9 @@ main {
     width: 29%;
     font-size: 27px;
   }
+}
+
+@media (min-width: 769px) {
+  .resultado-page { overflow-y: auto; }
 }
 
