@@ -34,6 +34,13 @@ body {
   font-style: normal;
 }
 
+.nunito-regular  {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 /* --- BOTONES --- */
 #valorInput {
   border-radius: 0.5rem; /* Bordes redondeados para el input */
@@ -455,12 +462,10 @@ main {
   min-height: 100vh;
   margin: 0; 
   position: relative;
-  /* Permitir scroll vertical para que el footer sea accesible en PC */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 .main-content {
-  /* Usamos Flexbox para centrar todo el contenido verticalmente */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -472,10 +477,10 @@ main {
 
 /* Nuevo contenedor para Gato + Botones */
 .cat-wrapper {
-  position: relative; /* ¡Clave! Para que los botones se posicionen dentro de él */
+  position: relative;
   max-width: 100%; 
   width: 500px; 
-  margin-top: -35px; /* Mantenemos el margen negativo para subirlo */
+  margin-top: -35px; 
 }
 
 .main-content .cat-image {
@@ -499,6 +504,8 @@ main {
   box-sizing: border-box; 
   position: relative; /* Activa el apilamiento de capas */
   z-index: 20;      /* Un número MÁS ALTO que el z-index del gato (que es 10) */
+  width: 100%;
+
 
 }
 
@@ -561,7 +568,7 @@ main {
   padding: 0 clamp(5px, 2vw, 10px);
   font-weight: 800;
   font-size: clamp(8px, 2.5vw, 12px);
-  font-family: "Nerko One", cursive;
+  font-family: "Nunito", sans-serif;
   box-shadow: 4px 1px 0 #b81e32; /* ¡Aquí está la sombra que querías! */
   cursor: pointer;
   transition: all 0.2s ease;
@@ -686,3 +693,28 @@ main {
   .resultado-page { overflow-y: auto; }
 }
 
+/* --- ESTILOS PARA LA BARRA DE DESPLAZAMIENTO (SCROLLBAR) --- */
+
+/* La pista del scrollbar (el fondo) */
+::-webkit-scrollbar {
+  width: 8px;  /* Ancho de la barra de desplazamiento */
+  height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+/* El "pulgar" o "thumb" del scrollbar (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+  background-color: #e082d1; /* Un color oscuro similar al de tu imagen (puedes ajustarlo) */
+  border-radius: 10px;       /* Bordes redondeados para el pulgar */
+  border: 2px solid #ffcee4; /* Un pequeño borde del color de tu fondo para que resalte */
+}
+
+/* La pista del scrollbar cuando está inactiva */
+::-webkit-scrollbar-track {
+  background-color: #ffcee4; /* El color de fondo claro de tu página */
+  border-radius: 10px;       /* Bordes redondeados para la pista */
+}
+
+/* Efecto al pasar el mouse por el pulgar (opcional) */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7A5B64; /* Un tono un poco más claro u oscuro al pasar el mouse */
+}
