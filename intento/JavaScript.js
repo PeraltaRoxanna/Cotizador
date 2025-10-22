@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (!isNaN(valor) && valor.trim() !== "") {
 
         // 1. HACE EL CÁLCULO
-        let calculo = Math.ceil((parseFloat(valor) + 2.2) * 1500);
+        let calculo = Math.ceil((parseFloat(valor) + 2.2) * 1630);
 
         // 2. FORMATEA EL RESULTADO (ej: 15.678)
         let resultadoFormateado = calculo.toLocaleString('es-AR');
